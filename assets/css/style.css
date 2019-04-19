@@ -157,3 +157,56 @@ i.ci {
   width: 100px;
   margin: 30px 0;
 }
+
+/* FEATURETTE */
+#featurette {
+  background: url('../img/stuff-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* INSTRUCTOR SECTION */
+#instructor {
+  background: white;
+}
+#instructor i.fa {
+  width: 35px;
+  height: 35px;
+  line-height: 37px;
+  text-align: center;
+  margin: 18px 5px 20px 0;
+  background: #bbb;
+  color: white;
+  border-radius: 100%;
+  transition: .4s;
+}
+#instructor i.fa-twitter:hover {
+  background: #55acee;
+}
+#instructor i.fa-facebook:hover {
+  background: #3b5998;
+}
+#instructor i.fa-google-plus:hover {
+  background: #db4b39;
+}
+#instructor .cell {
+  display: table;
+  font-size: 30px;
+  font-weight: bold;
+  width: 140px;
+  height: 140px;
+  background: #dd5638;
+  color: white;
+  border-radius: 100%;
+}
+#instructor .cell span {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+}
+#instructor .cell .cellContent {
+  display: table-cell;
+  vertical-align: middle;
+}
