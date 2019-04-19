@@ -111,7 +111,13 @@ img {
   margin: 7px 0 7px 0;
 }
 
-/* MODAL */
-#subscribeModal {
-
+/* BOOST INCOME SECTION  */
+#boost-in {
+  padding: 40px 0;
+}
+#boost-in img {
+  margin: 40px 0;
+}
+#boost-in .section-header {
+  margin: 20px 0;
 }
