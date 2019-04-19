@@ -115,9 +115,26 @@ img {
 #boost-in {
   padding: 40px 0;
 }
+#boost-in .section-header {
+  margin: 20px 0 80px;
+}
 #boost-in img {
+  width: 140px;
   margin: 40px 0;
 }
-#boost-in .section-header {
-  margin: 20px 0;
+
+/* WHO BENEFITS SECTION */
+#benefits {
+  padding: 40px 0;
+  background: white;
+}
+#benefits .section-header {
+  margin: 20px 0 60px;
+}
+#benefits img {
+  width: 140px;
+  margin: 40px 0;
+}
+#benefits p {
+  font-size: 1.2em;
 }
