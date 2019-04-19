@@ -24,5 +24,7 @@ $(function() {
     }); // end window scroll
 
   });
+
+  // Modal
   
 });

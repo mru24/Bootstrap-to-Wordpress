@@ -107,7 +107,7 @@
           <p class="lead text-center"><strong>Subscribe to our mailing list. </strong>We'll send somrthing special as a thank you.</p>
         </div>
         <div class="col-sm-4">
-          <a href="/" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="subscribeModal">Click here to subscribe</a>
+          <button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#subscribeModal">Click here to subscribe</button>
         </div>
       </div>
     </div>
@@ -159,8 +159,45 @@
   </footer>
 
   <!-- MODAL -->
-  <div>
+  <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="modalLabel"><i class="fa fa-envelope"> Subscribe to our mailing list</i></h4>
+        </div>
+        <div class="modal-body">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sit dolores optio illo debitis harum cumque explicabo aut adipisci laudantium error neque quod ipsam deleniti magni aliquid, eum <em>pariatur iure!</em>
+          </p>
+          <form class="form-inline" role="form">
+            <div class="form-group">
+              <label for="subscribe-name" class="sr-only">
+                Your first name
+              </label>
+              <input type="text" class="form-control" id="subscribe-name" placeholder="Your first name">
+            </div>
+            <div class="form-group">
+              <label for="subscribe-email" class="sr-only">
+                Your email
+              </label>
+              <input type="email" class="form-control" id="subscribe-email" placeholder="Your email">
+            </div>
 
+            <input type="submit" class="btn btn-danger" value="subscribe">
+
+          </form>
+          <hr />
+
+          <p>
+            <small>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis delectus, dicta perspiciatis. A fuga minima, accusantium dicta. Natus, officia, ullam?
+            </small>
+          </p>
+
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- BOOTSTRAP SCRIPTS -->
