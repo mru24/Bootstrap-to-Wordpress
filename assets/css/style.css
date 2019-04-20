@@ -210,3 +210,11 @@ i.ci {
   display: table-cell;
   vertical-align: middle;
 }
+
+/* TESTIMONIALS */
+#testimonials .row {
+  margin: 40px 0;
+}
+#testimonials .row p {
+  margin-top: 25px;
+}
