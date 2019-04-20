@@ -10,7 +10,7 @@ Blue Gray: #3e4249 */
 
 body {
   margin-top: 50px;
-  font-family: 'Lato', 'Raleway', Helvetica, sans-sans-serif;
+  font-family: 'Raleway', sans-sans-serif;
   font-size: 16px;
   background: url('../img/tile.jpg') top left repeat;
 }
@@ -46,7 +46,7 @@ img {
   max-width: 100%;
 }
 section {
-  padding: 60px 0;
+  padding: 90px 0;
 }
 .section-header {
   text-align: center;
@@ -61,8 +61,8 @@ section {
   background: url('../img/hero-bg.jpg');
   background-attachment: fixed;
   background-size: cover;
-  min-height: 500px;
-  padding: 40px 0;
+  min-height: 700px;
+  padding: 80px 0;
   color: white;
 }
 #hero article {
@@ -166,6 +166,9 @@ i.ci {
   background-attachment: fixed;
   color: white;
 }
+#featurette iframe {
+  box-shadow: 0 0 40px #444;
+}
 
 /* INSTRUCTOR SECTION */
 #instructor {
@@ -217,4 +220,20 @@ i.ci {
 }
 #testimonials .row p {
   margin-top: 25px;
+}
+
+/* SIGN-UP SECTION */
+#signup {
+  background: url('../img/hipster-stuff.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  color: white;
+}
+#signup p {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+#signup p span {
+  font-weight: bold;
 }
