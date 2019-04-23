@@ -38,8 +38,7 @@ h4 {
 a:link,
 a:visited,
 a:active {
-  /* color: #dd5638; */
-  color: inherit;
+  color: #dd5638;
 }
 a:hover {
   text-decoration: none;
@@ -48,9 +47,20 @@ a:hover {
 .btn {
   font-weight: bold;
 }
+a.btn {
+  color: white;
+}
 .btn-danger {
   background-color: #dd5638;
   border-collapse: #d95131;
+}
+.btn-success {
+  background: #79b044;
+  border: none;
+  transition: .4s;
+}
+.btn-success:hover {
+  background: #6a9b3d;
 }
 img {
   max-width: 100%;
@@ -65,13 +75,35 @@ section {
   width: 140px;
   margin: 40px 0;
 }
-.btn-success {
-  background: #79b044;
-  border: none;
-  transition: .4s;
+
+/* PAGES GLOGAL */
+.feature-image-default {
+  background: url('../img/stuff-feature.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 200px;
+  display: table;
 }
-.btn-success:hover {
-  background: #6a9b3d;
+.feature-image .page-title {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+}
+.post-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eee;
+}
+.title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #eee;
 }
 
 /* HERO SECTION  */
@@ -317,6 +349,11 @@ footer nav li a {
   margin: 0 3px;
   transition: .4s;
 }
+@media (max-width: 768px) {
+  footer nav li a {
+    margin: 12px 4px;
+  }
+}
 footer nav li a:hover {
   color: #dd5638;
 }
@@ -325,4 +362,77 @@ footer nav li a.signup-link {
 }
 footer nav li a.signup-link:hover {
   font-weight: bold;
+}
+
+/* BLOG */
+.feature-image {
+  background: url('../img/hipster-stuff.jpg');
+}
+.post {
+  background: white;
+  color: #666;
+  border: 2px solid #eee;
+  margin-bottom: 30px;
+}
+.post header,
+.post .post-excerpt {
+  padding: 20px;
+}
+.post header {
+  position: relative;
+}
+.post header .post-details {
+  width: 94%;
+  font-size: 12px;
+}
+.post i.fa {
+  font-size: 15px;
+  padding: 0 5px 0 10px;
+}
+.post i.fa:first-child {
+  padding: 0 5px 0 0;
+}
+.post header .post-comments-badge {
+  position: absolute;
+  top: 31px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: #79b044;
+  display: table;
+  transition: .4s;
+}
+.post header .post-comments-badge a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+.post header .post-comments-badge i.fa {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+.post header .post-comments-badge:hover {
+  background: #8bc653;
+}
+.post .post-image {
+  height: auto;
+}
+
+/* BLOG ASIDE */
+aside.blog .widget {
+  font-size: 0.9em;
+  background: white;
+  color: #666;
+  border: 2px solid #eee;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+aside.blog .widget li:hover {
+  position: relative;
+  margin-left: 2px;
 }
