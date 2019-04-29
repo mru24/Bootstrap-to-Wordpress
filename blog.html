@@ -22,6 +22,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
+
 </head>
 <body class="blog">
 
@@ -69,34 +70,6 @@
     <div class="container">
       <div class="row" id="primary">
         <main id="content" class="col-sm-8">
-          <article class="post">
-            <header>
-              <h3 class="post-title"><a href="post.html">Blog title</a></h3>
-              <div class="post-details">
-                <i class="fa fa-user"></i>Mark Brown
-                <i class="fa fa-clock-o"></i><time>10.04.2019</time>
-                <i class="fa fa-folder-open"></i>
-                <a href="">Tutorials</a>,
-                <a href="">Coding</a>
-                <i class="fa fa-tags"></i>Tagged
-                <a href="">wordpress</a>,
-                <a href="">premium</a>,
-                <a href="">html5</a>,
-                <a href="#">css3</a>
-                <div class="post-comments-badge">
-                  <a href=""><i class="fa fa-comments"></i>168</a>
-                </div>
-              </div>
-            </header>
-            <div class="post-image">
-              <img src="assets/img/hero-bg.jpg" alt="Hero Image">
-            </div>
-            <div class="post-excerpt">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita mollitia asperiores, quod, totam perspiciatis, tempore repellat quisquam ea sapiente est itaque ratione aperiam numquam nihil reprehenderit architecto recusandae corporis ipsam optio voluptatum harum error. Ratione accusantium ducimus inventore, optio dolorem.
-              <a href="#">..continue reading &gt;&gt;</a>
-              </p>
-            </div>
-          </article>
 
           <article class="post">
             <header>
@@ -155,8 +128,69 @@
               </p>
             </div>
           </article>
+
+          <article class="post">
+            <header>
+              <h3 class="post-title"><a href="post.html">Blog title</a></h3>
+              <div class="post-details">
+                <i class="fa fa-user"></i>Mark Brown
+                <i class="fa fa-clock-o"></i><time>10.04.2019</time>
+                <i class="fa fa-folder-open"></i>
+                <a href="">Tutorials</a>,
+                <a href="">Coding</a>
+                <i class="fa fa-tags"></i>Tagged
+                <a href="">wordpress</a>,
+                <a href="">premium</a>,
+                <a href="">html5</a>,
+                <a href="#">css3</a>
+                <div class="post-comments-badge">
+                  <a href=""><i class="fa fa-comments"></i>168</a>
+                </div>
+              </div>
+            </header>
+            <div class="post-image">
+              <img src="assets/img/hero-bg.jpg" alt="Hero Image">
+            </div>
+            <div class="post-excerpt">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita mollitia asperiores, quod, totam perspiciatis, tempore repellat quisquam ea sapiente est itaque ratione aperiam numquam nihil reprehenderit architecto recusandae corporis ipsam optio voluptatum harum error. Ratione accusantium ducimus inventore, optio dolorem.
+              <a href="#">..continue reading &gt;&gt;</a>
+              </p>
+            </div>
+
+          </article>
+
+          <div class="add-post">
+            <h3>Add post</h3>
+            <form>
+              <p>
+                <small>
+                  Your email address will not be published. Required fields are marked <span class="required">*</span>
+                </small>
+              </p>
+              <div class="form-group">
+                <label>Your name *</label>
+                <input type="text" class="form-control" placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label>Your email *</label>
+                <input type="email" class="form-control" placeholder="Your email">
+              </div>
+              <div class="form-group">
+                <label>Website</label>
+                <input type="url" class="form-control" placeholder="Your website">
+              </div>
+              <div class="form-group">
+                <label>Your Post *</label>
+                <textarea class="form-control" rows="4"></textarea>
+              </div>
+              <button type="submit" class="btn btn-warning btn-lg btn-block">Submit</button>
+            </form>
+          </div>
+
         </main>
+
         <aside class="col-sm-4 blog">
+
           <div class="widget">
             <h4 class="title">Join our mailing list</h4>
             <p>
@@ -164,17 +198,20 @@
             </p>
             <button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#subscribeModal">Click here to subscribe</button>
           </div>
+
           <div class="widget">
             <form>
               <input type="text" class="form-control" placeholder="Search the blog...">
             </form>
           </div>
+
           <div class="widget">
             <h4 class="title">About Bootstrap to Wordpress</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta quia non ex porro qui assumenda cupiditate voluptatibus, itaque, accusamus deserunt soluta quas asperiores repellendus labore magnam adipisci eveniet, expedita quod voluptatem sunt iure cumque perspiciatis.
             </p>
           </div>
+
           <div class="widget">
             <h4 class="title">Recent Posts</h4>
             <ul class="list-unstyled">
@@ -185,6 +222,7 @@
               <li><a href="">Blog post #5</a></li>
             </ul>
           </div>
+
           <div class="widget">
             <h4 class="title">Categories</h4>
             <ul class="list-unstyled">
@@ -195,13 +233,11 @@
               <li><a href="">Category #5</a></li>
             </ul>
           </div>
+
         </aside>
       </div>
     </div>
   </section>
-
-
-
 
   <!-- SIGN UP  -->
   <section id="signup" data-type="background" data-speed="4">
@@ -227,8 +263,8 @@
         <div class="col-sm-6">
           <nav>
             <ul class="list-unstyled">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="blog.html">Blog</a></li>
+              <li><a href="/">Home</a></li>
+              <li class="active"><a href="blog.html">Blog</a></li>
               <li><a href="resources.html">Resources</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li><a href="signup.html" class="signup-link">Sign up now!</a></li>
@@ -272,6 +308,7 @@
             <input type="submit" class="btn btn-danger" value="subscribe">
 
           </form>
+
           <hr />
 
           <p>

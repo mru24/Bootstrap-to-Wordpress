@@ -75,12 +75,14 @@ section {
   width: 140px;
   margin: 40px 0;
 }
+textarea {
+  resize: none;
+}
 
 /* PAGES GLOGAL */
 .feature-image-default {
-  background: url('../img/stuff-feature.jpg');
+  background: url('../img/stuff-feature.jpg') no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   width: 100%;
   height: 200px;
   display: table;
@@ -357,6 +359,12 @@ footer nav li a {
 footer nav li a:hover {
   color: #dd5638;
 }
+footer nav li.active {
+  border-bottom: 4px solid #dd5638;
+}
+footer nav li.active a {
+  margin-bottom: 2px;
+}
 footer nav li a.signup-link {
   color: #dd5638;
 }
@@ -365,14 +373,19 @@ footer nav li a.signup-link:hover {
 }
 
 /* BLOG */
-.feature-image {
-  background: url('../img/hipster-stuff.jpg');
+.blog .feature-image {
+  background: url('../img/hipster-stuff.jpg') no-repeat;
+  background-size: cover;
 }
-.post {
+.post,
+.add-post {
   background: white;
   color: #666;
   border: 2px solid #eee;
   margin-bottom: 30px;
+}
+.add-post {
+  padding: 20px;
 }
 .post header,
 .post .post-excerpt {
@@ -423,6 +436,32 @@ footer nav li a.signup-link:hover {
   height: auto;
 }
 
+/* BLOG SINGLE POST COMMENTS*/
+.comments {
+  background: white;
+  color: #666;
+  border: 2px solid #eee;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.comments ol li {
+  background: rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.03);
+  border-radius: 4px;
+  padding: 15px;
+}
+.comments ol li ol.children {
+  font-size: 0.93em;
+}
+/* ADD COMMENT FORM */
+.required {
+  font-size: 2em;
+  font-weight: bold;
+  position: relative;
+  top: 6px;
+  margin-left: 6px;
+}
+
 /* BLOG ASIDE */
 aside.blog .widget {
   font-size: 0.9em;
@@ -435,4 +474,40 @@ aside.blog .widget {
 aside.blog .widget li:hover {
   position: relative;
   margin-left: 2px;
+}
+
+/* RESOURCES */
+.resources .feature-image {
+  background: url('../img/stuff-feature.jpg') no-repeat;
+  background-size: cover;
+}
+.resources-info {
+  margin: 30px 15px;
+}
+.resource-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 20px;
+}
+.resource {
+  width: 100%;
+  margin: 20px 0;
+}
+
+@media (max-width: 992px) {
+  .resource-container {
+    grid-template-columns: auto;
+  }
+}
+
+/* CONTACT */
+form {
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 100%;
+  }
 }

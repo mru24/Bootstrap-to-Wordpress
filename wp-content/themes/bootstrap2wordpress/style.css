@@ -1,0 +1,906 @@
+/*!
+Theme Name: Bootstrap 2 Wordpress
+Theme URI: http://underscores.me/
+Author: Val Wroblewski
+Author URI: http://wwproject.eu
+Description: Costom bootstrap wordpress theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: bootstrap2wordpress
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Bootstrap 2 Wordpress is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/* CUSTOM STYLES */
+
+/* COLOUR REFERENCES
+Green: #79b044
+Salmon: #dd5638
+Blue Gray: #3e4249 */
+
+/* GENERAL */
+
+body {
+  margin-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background: url('/projects/php/Course_01/wp-content/themes/bootstrap2wordpress/assets/img/tile.jpg') top left repeat;
+}
+.navbar-fixed-top {
+	transition: .5s;
+}
+.logged-in .navbar-fixed-top {
+	top: 33px;
+}
+@media (max-width: 782px) {
+	.logged-in .navbar-fixed-top {
+		top: 47px;
+	}
+}
+@media (max-width: 600px) {
+	.sticky {
+		transform: translateY(-47px);
+	}
+}
+.opacity {
+	background: rgba(0, 0, 0, 0.3);
+	transition: .6s
+}
+.opacity:hover {
+	background: rgba(0, 0, 0, 1);
+}
+
+/* GLOBAL */
+/* * {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+} */
+h1,h2,h3,h4,h5,h6 {
+  font-weight: bold;
+}
+h1 {
+  font-size: 3em;
+}
+h1,h2 {
+  margin: 0 0 40px;
+}
+h3 {
+  margin: 20px 0;
+}
+h4 {
+  font-size: 18px;
+}
+a:link,
+a:visited,
+a:active {
+  color: #dd5638;
+	text-decoration: none;
+	outline: none;
+}
+a:hover {
+  text-decoration: none;
+  color: #c9302c;
+}
+ol,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.btn {
+  font-weight: bold;
+}
+a.btn {
+  color: white;
+}
+.btn-danger {
+  background-color: #dd5638;
+  border-collapse: #d95131;
+}
+.btn-success {
+  background: #79b044;
+  border: none;
+  transition: .4s;
+}
+.btn-success:hover {
+  background: #6a9b3d;
+}
+img {
+  max-width: 100%;
+}
+section {
+  padding: 40px 0;
+}
+.section-header {
+  text-align: center;
+}
+.section-header img {
+  width: 140px;
+  margin: 40px 0;
+}
+textarea {
+  resize: none;
+	width: 100%;
+}
+input[type="search"] {
+	width: 100%;
+}
+
+/* NAVBAR */
+li.current_page_item {
+	border-bottom: 4px solid #dd5638;
+}
+
+/* PAGES GLOGAL */
+.feature-image {
+	background: url('/projects/php/Course_01/wp-content/themes/bootstrap2wordpress/assets/img/hipster-stuff.jpg')  50% 0 repeat fixed;
+	background-size: cover;
+	width: 100%;
+	height: 250px;
+	display: table;
+}
+.feature-image .page-title {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+	text-shadow: 0 0 15px #222;
+}
+.feature-image .page-title small {
+	display: block;
+	margin-top: 15px;
+	color: #d5d5d5;
+}
+.title,
+.post-title,
+.widget-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #eee;
+}
+
+/* HERO SECTION  */
+#hero {
+  background: url('/projects/php/Course_01/wp-content/themes/bootstrap2wordpress/assets/img/hero-bg.jpg') 50% 0 repeat fixed;
+	background-size: cover;
+  padding: 70px 0;
+  color: white;
+}
+@media (max-width: 768px) {
+  #hero img {
+    width: 50%;
+  }
+}
+#hero article {
+  text-align: center;
+}
+#hero .hero-text {
+  margin-top: 30px;
+}
+#price-timeline {
+  margin: 30px 0 60px;
+  text-align: center;
+}
+#price-timeline .price {
+  display: inline-block;
+  margin: 0 2% 0 0;
+  width: 30%;
+	min-height: 105px;
+  background: #3e4249;
+  padding: 10px 20px 30px;
+  position: relative;
+  vertical-align: top;
+}
+@media (max-width: 1210px) {
+  #price-timeline .price {
+    min-height: 125px;
+  }
+}
+@media (max-width: 568px) {
+  #price-timeline .price {
+    min-height: 110px;
+  }
+	#price-timeline .price h4 {
+		font-size: 14px;
+	}
+}
+#price-timeline .price:first-child {
+  background: #dd5638;
+}
+#price-timeline .price span {
+  background: #101010;
+  display: block;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  line-height: 70px;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  margin-left: -35px;
+}
+#price-timeline h4 {
+  margin: 0 0 10px;
+}
+#price-timeline h4 small {
+  color: white;
+  font-weight: bold;
+  display: block;
+}
+
+/* OPT-IN SECTION */
+#opt-in {
+  background: #3e4249;
+  color: white;
+  font-size: 1.2em;
+}
+#opt-in p {
+  margin: 5px 0;
+}
+@media (max-width: 768px) {
+  #opt-in p {
+    margin: 15px 0;
+    text-align: left;
+  }
+}
+
+/* BOOST INCOME SECTION  */
+#boost-in {
+
+}
+
+/* WHO BENEFITS SECTION */
+#benefits {
+  background: white;
+}
+
+/* COURSE FEATURES */
+#course-features {
+  background: #3e4249;
+  color: white;
+  text-align: center;
+}
+
+/* CUSTOM ICON SPRITES */
+i.ci {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: url('/projects/php/Course_01/wp-content/themes/bootstrap2wordpress/assets/img/icon-sprite.png') no-repeat;
+}
+.ci.ci-computer { background-position: 0 0; }
+.ci.ci-watch { background-position: -40px 0; }
+.ci.ci-calender { background-position: -80px 0; }
+.ci.ci-community { background-position: -120px 0; }
+.ci.ci-instructor { background-position: -160px 0; }
+.ci.ci-device { background-position: -200px 0; }
+
+/* PROJECT-FEATURES SECTION */
+#project-features img {
+  margin: 30px 0;
+}
+
+/* FEATURETTE */
+#featurette {
+  background: url('/projects/php/Course_01/wp-content/themes/bootstrap2wordpress/assets/img/stuff-bg.jpg');
+  background-size: cover;
+	background-attachment: fixed;
+	background-position: bottom;
+  color: white;
+}
+#featurette iframe {
+  box-shadow: 0 0 40px #444;
+}
+
+/* INSTRUCTOR SECTION */
+#instructor {
+  background: white;
+}
+#instructor i.fa {
+  width: 35px;
+  height: 35px;
+  line-height: 37px;
+  text-align: center;
+  margin: 18px 5px 20px 0;
+  background: #bbb;
+  color: white;
+  border-radius: 100%;
+  transition: .4s;
+}
+#instructor i.fa-twitter:hover {
+  background: #55acee;
+}
+#instructor i.fa-facebook:hover {
+  background: #3b5998;
+}
+#instructor i.fa-linkedin:hover {
+  background: #0077B5;
+}
+#instructor .cell {
+  display: table;
+  font-size: 30px;
+  font-weight: bold;
+  width: 140px;
+  height: 140px;
+  background: #dd5638;
+  color: white;
+  border-radius: 100%;
+}
+@media (max-width: 568px) {
+  #instructor .cell {
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+  }
+}
+#instructor .cell span {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+}
+#instructor .cell .cellContent {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* TESTIMONIALS */
+#testimonials .row {
+  margin: 40px 0;
+}
+#testimonials .row p {
+  margin-top: 25px;
+}
+blockquote {
+  border: none;
+  font-style: italic;
+}
+blockquote cite {
+  display: block;
+  margin-top: 15px;
+  color: #777;
+}
+
+/* SIGN-UP SECTION */
+#signup {
+  background: url('/projects/php/Course_01/wp-content/themes/bootstrap2wordpress/assets/img/hipster-stuff.jpg') 50% 0 repeat fixed;
+	background-size: cover;
+  color: white;
+}
+#signup p {
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+#signup p span {
+  font-weight: bold;
+  border-bottom: 2px solid #dd5638;
+}
+#signup .btn {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+/* FOOTER */
+footer {
+  background: #3e4249;
+  padding: 15px 0;
+}
+footer nav li {
+  display: inline-block;
+  font-size: 16px;
+}
+footer nav li a,
+footer nav li a:active,
+footer nav li a:visited {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  footer nav li a {
+    /* color: #eee; */
+  }
+}
+footer nav li {
+  padding: 4px 5px;
+	transition: .4s;
+}
+footer nav li:hover a {
+	color: #dd5638;
+}
+footer nav .signup-link a,
+footer nav .signup-link a:visited,
+footer nav .signup-link a:active {
+  color: #dd5638; !important
+}
+footer nav .signup-link:hover a {
+	color: #6a9b3d; !important
+}
+
+/* BLOG */
+.post,
+.add-post,
+.widget {
+  background: white;
+  color: #666;
+  border: 2px solid #eee;
+  margin: 15px 0;
+	border-radius: 5px;
+}
+.post header,
+.post .post-excerpt,
+.post .post-body {
+  padding: 20px;
+}
+.post header {
+  position: relative;
+}
+.post header .post-details {
+  width: 94%;
+  font-size: 12px;
+}
+.post i.fa {
+  font-size: 15px;
+  padding: 0 5px 0 10px;
+}
+.post i.fa:first-child {
+  padding: 0 5px 0 0;
+}
+.post header .post-comments-badge {
+  position: absolute;
+  top: 31px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: #79b044;
+  display: table;
+  transition: .4s;
+}
+.post header .post-comments-badge a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+.post header .post-comments-badge i.fa {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+.post header .post-comments-badge:hover {
+  background: #8bc653;
+}
+.post .post-image img {
+  height: auto;
+}
+
+/* BLOG SINGLE POST COMMENTS*/
+#comments {
+  background: white;
+  color: #666;
+  border: 2px solid #eee;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+#comments ol li {
+  background: rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.03);
+  border-radius: 4px;
+  padding: 15px;
+}
+#comments .comment {
+	margin-top: 10px;
+}
+#comments ol li ol.children {
+  font-size: 0.93em;
+}
+#comments footer {
+	background: none;
+	color: inherit;
+}
+#comments footer a {
+	color: inherit;
+}
+#comments .comment-metadata {
+	margin-top: 10px;
+	font-size: 0.8em;
+	text-align: right;
+}
+/* ADD COMMENT FORM */
+.leave-comment h3 {
+	text-align: center;
+}
+.required {
+  font-size: 2em;
+  font-weight: bold;
+  position: relative;
+  top: 6px;
+  margin-left: 6px;
+}
+/* BLOG ASIDE */
+.widget {
+  font-size: 0.9em;
+  padding: 20px;
+}
+.widget li:hover {
+  position: relative;
+  margin-left: 2px;
+}
+
+/* RESOURCES */
+.resources-info {
+  margin: 30px 15px;
+}
+.resource-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+	width: 100%;
+}
+.resource {
+  width: 100%;
+  margin: 20px 0;
+}
+.resource-content {
+	margin: 30px 0;
+}
+
+@media (max-width: 992px) {
+  .resource-container {
+    grid-template-columns: auto;
+  }
+}
+
+/* CONTACT */
+form {
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 100%;
+  }
+}
+
+/* SCROLL 2 TOP */
+.scroll2Top {
+	display: block;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border: 3px solid #dd5638;
+	border-radius: 4px;
+	transform: translateX(140px);
+	transition: .5s;
+	opacity: .6;
+}
+@media (max-width: 768px) {
+	.scroll2Top {
+		bottom: 10px;
+		right: 10px;
+	}
+}
+.scroll2Top:hover {
+	opacity: 1;
+}
+.scroll2Top i {
+	font-size: 2em;
+	padding: 2px 8px;
+	pointer-events: none;
+}
+.scroll-visible {
+	transform: translateX(0);
+}
